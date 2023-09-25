@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - EnemyKillZone
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -44,6 +45,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 195862993
     locked: 0
   - name: Anemone
     uniqueID: 1611484309

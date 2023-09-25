@@ -6,12 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D body;
 
-    float horizontal;
-    float vertical;
-    float slowDiagonal = 0.7f;
+    public float horizontal;
+    public float vertical;
+    public float slowDiagonal = 0.7f;
 
     public float moveSpeed = 0.5f;
-    bool facingLeft = true;
+    public bool facingLeft = true;
 
     void Start()
     {

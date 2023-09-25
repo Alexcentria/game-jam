@@ -6,10 +6,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // default behavior if not set (should be set!!)
-    [SerializeField]
-    private int damage = 0;
-    [SerializeField]
-    private int health = 0;
+    // [SerializeField]
+    // private int damage = 0;
+    // [SerializeField]
+    // private int health = 0;
     [SerializeField]
     private float speed = 12f;
 
