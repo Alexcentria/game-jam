@@ -1,4 +1,4 @@
 # game-jam
-new name tba
+KEEP YOUR ANEMONES CLOSER
 
 DUE: 30th, MIDNIGHT, WE GOT THIS YALL
