@@ -34,23 +34,23 @@ public class PlayerController : MonoBehaviour
         }
 
         // keep player in-bounds on y-axis
-        if (transform.position.y >= 36.3f)
+        if (transform.position.y >= 35.2f)
         {
-            transform.position = new Vector3(transform.position.x, 36.5f, 0);
+            transform.position = new Vector3(transform.position.x, 35.5f, 0);
         }
-        else if (transform.position.y <= -36.3f)
+        else if (transform.position.y <= -35.2f)
         {
-            transform.position = new Vector3(transform.position.x, -36.5f, 0);
+            transform.position = new Vector3(transform.position.x, -35.5f, 0);
         }
 
         // keep player in-bounds on x-axis
-        if (transform.position.x >= 124.4f)
+        if (transform.position.x >= 120.7f)
         {
-            transform.position = new Vector3(124.6f, transform.position.y, 0);
+            transform.position = new Vector3(120.5f, transform.position.y, 0);
         }
-        else if (transform.position.x <= -124.4f)
+        else if (transform.position.x <= -120.7f)
         {
-            transform.position = new Vector3(-124.6f, transform.position.y, 0);
+            transform.position = new Vector3(-120.5f, transform.position.y, 0);
         }
 
         body.velocity = new Vector2(horizontal * moveSpeed, vertical * moveSpeed);
