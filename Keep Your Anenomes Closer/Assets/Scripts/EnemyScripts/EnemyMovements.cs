@@ -58,7 +58,27 @@ public class EnemyMovements : MonoBehaviour
 
     void moveCharater(Vector2 direction)
     {
-        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        // keep player in-bounds on y-axis
+        if (transform.position.y >= 35.2f)
+        {
+            transform.position = new Vector3(transform.position.x, 35.5f, 0);
+        }
+        else if (transform.position.y <= -35.2f)
+        {
+            transform.position = new Vector3(transform.position.x, -35.5f, 0);
+        }
+        // keep player in-bounds on x-axis
+        else if (transform.position.x >= 120.7f)
+        {
+            transform.position = new Vector3(120.5f, transform.position.y, 0);
+        }
+        else if (transform.position.x <= -120.7f)
+        {
+            transform.position = new Vector3(-120.5f, transform.position.y, 0);
+        }
+        else {
+            rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        }
     }
 
     void Flip()
