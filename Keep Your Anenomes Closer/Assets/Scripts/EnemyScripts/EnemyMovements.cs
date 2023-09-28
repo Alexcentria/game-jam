@@ -53,7 +53,10 @@ public class EnemyMovements : MonoBehaviour
                 Flip();
             }
         }
-        moveCharater(movement);
+        if (_playerAwarenessControl.AwareOfPlayer)
+        {
+            moveCharater(movement);
+        }
         // keep player in-bounds on y-axis
         if (transform.position.y >= 35.7f || transform.position.y <= -35.7f)
         {
