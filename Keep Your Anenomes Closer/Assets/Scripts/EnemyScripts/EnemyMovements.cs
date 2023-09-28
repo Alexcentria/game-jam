@@ -6,7 +6,7 @@ public class EnemyMovements : MonoBehaviour
 {
     public Transform player;
     public float moveSpeed = 2f;
-    // private bool spriteLeft = true;
+    private bool enemyLeft = true;
     private PlayerController c;
     private Rigidbody2D rb;
     private Vector2 movement; // equal to target direction
@@ -43,42 +43,32 @@ public class EnemyMovements : MonoBehaviour
     private void FixedUpdate()
     {
         c = g.GetComponent<PlayerController>();
-        if (c.horizontal != 0) {
-            if (c.horizontal > 0 && c.facingLeft)
+        if (_playerAwarenessControl.AwareOfPlayer) {
+            if (c.facingLeft && !enemyLeft)
             {
                 Flip();
             }
-            else if (c.horizontal < 0 && !c.facingLeft)
+            else if (!c.facingLeft && enemyLeft)
             {
                 Flip();
             }
         }
         moveCharater(movement);
+        // keep player in-bounds on y-axis
+        if (transform.position.y >= 35.7f || transform.position.y <= -35.7f)
+        {
+            // do nothing
+        }
+        // keep player in-bounds on x-axis
+        else if (transform.position.x >= 120.5f || transform.position.x <= -120.5f)
+        {
+            // do nothing
+        }
     }
 
     void moveCharater(Vector2 direction)
     {
-        // keep player in-bounds on y-axis
-        if (transform.position.y >= 35.2f)
-        {
-            transform.position = new Vector3(transform.position.x, 35.5f, 0);
-        }
-        else if (transform.position.y <= -35.2f)
-        {
-            transform.position = new Vector3(transform.position.x, -35.5f, 0);
-        }
-        // keep player in-bounds on x-axis
-        else if (transform.position.x >= 120.7f)
-        {
-            transform.position = new Vector3(120.5f, transform.position.y, 0);
-        }
-        else if (transform.position.x <= -120.7f)
-        {
-            transform.position = new Vector3(-120.5f, transform.position.y, 0);
-        }
-        else {
-            rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
-        }
+        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 
     void Flip()
@@ -86,5 +76,6 @@ public class EnemyMovements : MonoBehaviour
         Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
+        enemyLeft = !enemyLeft;
     }
 }
