@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class KillCollision : MonoBehaviour
 {
-    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!(collision.gameObject.CompareTag("Player")))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log("Collided");
             Destroy(collision.gameObject);
         }
     }
