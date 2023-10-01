@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TimerScript : MonoBehaviour
 {
     public float timeLeft = 90;
-    public bool timerOn = false;
+    public bool timerOn;
 
     public Text TimerTxt;
 

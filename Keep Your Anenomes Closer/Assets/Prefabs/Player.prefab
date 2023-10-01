@@ -99,12 +99,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da04ac62b8bf9f44a48429aa7077dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 0}
+  body: {fileID: 5746610601509409096}
   horizontal: 0
   vertical: 0
   slowDiagonal: 0.7
   moveSpeed: 17.5
   facingLeft: 1
+  maxHealth: 20
+  currentHealth: 0
+  healthBar: {fileID: 0}
 --- !u!50 &5746610601509409096
 Rigidbody2D:
   serializedVersion: 4
