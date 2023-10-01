@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
         if (count < limit)
         {
             yield return new WaitForSeconds(interval);
-            GameObject newEnemy = Instantiate(enemy, new UnityEngine.Vector3(Random.Range(-5f, 5f), Random.Range(-6f, 6f), 0), UnityEngine.Quaternion.identity);
+            GameObject newEnemy = Instantiate(enemy, new UnityEngine.Vector3(Random.Range(-3f, 3f), Random.Range(-4f, 4f), 0), UnityEngine.Quaternion.identity);
             StartCoroutine(spawnEnemy(interval, enemy));
 
             count++;
