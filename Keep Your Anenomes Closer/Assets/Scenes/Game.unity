@@ -1003,7 +1003,6 @@ GameObject:
   - component: {fileID: 1473875443}
   - component: {fileID: 1473875444}
   - component: {fileID: 1473875445}
-  - component: {fileID: 1473875445}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -1052,13 +1051,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704147855d35479478b38a36db52860d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicPrefab: {fileID: 1524057806}
+  basicPrefab: {fileID: 821721001}
   enemyInterval: 10
---- !u!1 &1524057806 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5724011190187474984, guid: db43a7088e70a6a479f8af7202c56286, type: 3}
-  m_PrefabInstance: {fileID: 6248824499848788787}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1655411967
 GameObject:
   m_ObjectHideFlags: 0
