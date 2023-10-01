@@ -23,7 +23,7 @@ public class ScoreCount : MonoBehaviour
     // Update is called once per frame
     public void Addpoint()
     {
-        //Add score for each despawn
+        //Add score for each despawned 
         score += 5;
         scoreText.text = "POINTS: " + score.ToString();
 
