@@ -670,7 +670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLeft: 90
-  timerOn: 1
+  timerOn: 0
   TimerTxt: {fileID: 2113281944}
 --- !u!1 &763849936
 GameObject:
@@ -1678,8 +1678,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 108, y: 506}
-  m_SizeDelta: {x: 152.2037, y: 50}
+  m_AnchoredPosition: {x: 108.38818, y: 506}
+  m_SizeDelta: {x: 153.2238, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2113281944
 MonoBehaviour:
@@ -1707,7 +1707,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 40
+    m_MaxSize: 48
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
