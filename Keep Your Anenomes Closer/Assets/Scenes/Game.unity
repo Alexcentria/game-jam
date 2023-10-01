@@ -661,11 +661,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coefficient: 10
---- !u!1 &775202105 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5724011190187474984, guid: db43a7088e70a6a479f8af7202c56286, type: 3}
-  m_PrefabInstance: {fileID: 6248824499848788787}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &898160171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,7 +997,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1473875443}
   - component: {fileID: 1473875444}
-  - component: {fileID: 1473875445}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
