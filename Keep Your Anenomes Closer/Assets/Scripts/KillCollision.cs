@@ -8,7 +8,6 @@ public class KillCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Collided");
             Destroy(collision.gameObject);
         }
     }

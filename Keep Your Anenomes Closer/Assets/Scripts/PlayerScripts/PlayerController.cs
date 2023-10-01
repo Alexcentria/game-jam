@@ -13,15 +13,34 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 0.5f;
     public bool facingLeft = true;
 
+    public int maxHealth = 20;
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+
     }
 
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Hit??");
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(2);
+            Debug.Log("HIT");
+        }
     }
 
     private void FixedUpdate()
@@ -72,5 +91,11 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.localScale = currentScale;
 
         facingLeft = !facingLeft;
+    }
+
+    void TakeDamage(int health)
+    {
+        currentHealth -= health;
+        healthBar.SetHealth(currentHealth);
     }
 }
