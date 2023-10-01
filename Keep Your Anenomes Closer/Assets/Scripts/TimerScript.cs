@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimerScript : MonoBehaviour
 {
-    public float timeLeft = 90;
+    public float timeLeft = 5;
     public bool timerOn;
 
     public Text TimerTxt;
@@ -28,6 +29,7 @@ public class TimerScript : MonoBehaviour
                 Debug.Log("Time's up!");
                 timeLeft = 0;
                 timerOn = false;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
