@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EnemyKillZone
   - Enemy
+  - CollisionTag
   layers:
   - Default
   - TransparentFX
