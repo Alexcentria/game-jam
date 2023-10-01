@@ -11,6 +11,9 @@ public class KillCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            //Update score
+            ScoreCount.instance.Addpoint(); 
+
             Destroy(collision.gameObject);
             audioPlayer.Play();
         }
