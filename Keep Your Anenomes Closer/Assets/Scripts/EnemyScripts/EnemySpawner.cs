@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    int count = 1;
-    int limit = 5;
     // CALL [SerializeField] before components of a prefab (:
     [SerializeField]
     private GameObject basicPrefab;
@@ -21,14 +19,8 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
-        if (count < limit)
-        {
-            yield return new WaitForSeconds(interval);
-            GameObject newEnemy = Instantiate(enemy, new UnityEngine.Vector3(Random.Range(-5f, 5f), Random.Range(-6f, 6f), 0), UnityEngine.Quaternion.identity);
-            StartCoroutine(spawnEnemy(interval, enemy));
-
-            count++;
-        }
-       
+        yield return new WaitForSeconds(interval);
+        GameObject newEnemy = Instantiate(enemy, new UnityEngine.Vector3(Random.Range(-90f, 115f), Random.Range(-32f, 32f), 0), UnityEngine.Quaternion.identity);
+        StartCoroutine(spawnEnemy(interval, enemy));
     }
 }
