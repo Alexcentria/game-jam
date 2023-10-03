@@ -47,12 +47,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Enemy
+    uniqueID: 467164893
+    locked: 0
   - name: Player
     uniqueID: 195862993
     locked: 0
   - name: Anemone
     uniqueID: 1611484309
-    locked: 0
-  - name: Enemy
-    uniqueID: 467164893
     locked: 0
