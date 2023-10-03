@@ -55,4 +55,16 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void PauseButton()
+    {
+        if (!isPaused)
+        {
+            PauseGame();
+        }
+        else
+        {
+            ResumeGame();
+        }
+    }
 }
